@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio: Calculando el Total</title>
+    <link rel="stylesheet" href="./asset/css/style.css" />
+  </head>
+  <body>
+    <section class="tarjeta-interactiva">
+      <div class="tarjeta">
+        <img
+          class="fotonote"
+          src="./asset/img/notebook.png"
+          alt="notebook abierta"
+        />
+        <p class="titulo">Laptop Gamer AMD</p>
+        <input id="input-1" placeholder="Cantidad" type="text" />
+        <input id="input-2" placeholder="Escriba un color" type="text" />
+        <p class="precio">Precio $400000</p>
+        <button
+          onclick="
+            element1 = document.querySelector('#input-1')
+            unit = document.querySelector('#unit')
+            unit.innerHTML = element1.value
+            element2 = document.querySelector('#input-2')
+            color = document.querySelector('#colorBuy')
+            color.style.backgroundColor = element2.value
+            total = document.querySelector('#total')
+            total.innerHTML = element1.value*400000
+            "
+        >
+          Calcular Total
+        </button>
+      </div>
+      <div class="resultado-consulta">
+        <ul>
+          <li>Total $: <span id="total">$0</span></li>
+          <li>Cantidad: <span id="unit">0</span></li>
+          <li>Color: <span id="colorBuy">&nbsp; &nbsp; &nbsp;</span></li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>
